@@ -1,4 +1,7 @@
 # NTHU-Distributed-System
+## Complete Screenshot
+![image](https://github.com/johnson684/NTHU-Distributed-System/assets/86285385/eba085d4-4cf4-477e-a3f2-2685deae45b7)
+![image](https://github.com/johnson684/NTHU-Distributed-System/assets/86285385/d967c206-ba1a-4e90-a991-07d3950eae31)
 
 The repository includes microservices for the NTHU Distributed System course lab. The goal of this project is to **introduce a production, realworld microservices backend mono-repo architecture** for teaching purpose.
 
