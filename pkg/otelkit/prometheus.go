@@ -36,6 +36,7 @@ type PrometheusServiceMeter struct {
 
 	server         *http.Server
 	requestCounter syncint64.Counter
+	errorCounter   syncint64.Counter
 	// TODO
 	responseTimeHistogram syncint64.Histogram
 }
@@ -56,7 +57,9 @@ func (m *PrometheusServiceMeter) UnaryServerInterceptor() func(ctx context.Conte
 
 		// update error request counter when error occurs
 		// TODO
-
+		if err != nil {
+			m.errorCounter.Add(ctx, 1, attributes...)
+		}
 		// measure response time
 		responseTime := time.Since(start)
 		m.responseTimeHistogram.Record(ctx, responseTime.Milliseconds(), attributes...)
@@ -88,6 +91,10 @@ func NewPrometheusServiceMeter(ctx context.Context, conf *PrometheusServiceMeter
 
 	// initiate error request counter
 	// TODO
+	errorCounter, err := meter.SyncInt64().Counter("error_request", instrument.WithDescription("count the number of errors"))
+	if err != nil {
+		logger.Fatal("failed to create errors counter", zap.Error(err))
+	}
 
 	responseTimeHistogram, err := meter.SyncInt64().Histogram("response_time", instrument.WithDescription("measure response time"))
 	if err != nil {
@@ -99,6 +106,7 @@ func NewPrometheusServiceMeter(ctx context.Context, conf *PrometheusServiceMeter
 		requestCounter: requestCounter,
 		// TODO
 		responseTimeHistogram: responseTimeHistogram,
+		errorCounter:          errorCounter,
 	}
 }
 
