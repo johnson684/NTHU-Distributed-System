@@ -41,7 +41,7 @@ func (s *stream) HandleVideoCreated(ctx context.Context, req *pb.HandleVideoCrea
 		// [Describe] Transcode video if get message with scale != 0, you can handle error occurance like above primitive.ObjectIDFromHex(req.GetId()).
 		err = s.handleVideoWithVariant(ctx, id, variant, req.Url)
 		if err != nil {
-			return nil, &saramakit.HandlerError{Retry: false, Err: err}
+			return nil, &saramakit.HandlerError{Retry: true, Err: err}
 		}
 		return &emptypb.Empty{}, nil
 	}
@@ -56,7 +56,7 @@ func (s *stream) HandleVideoCreated(ctx context.Context, req *pb.HandleVideoCrea
 			Scale: int32(resolution),
 		})
 		if err != nil {
-			return nil, &saramakit.HandlerError{Retry: false, Err: err}
+			return nil, &saramakit.HandlerError{Retry: true, Err: err}
 		}
 	}
 	return &emptypb.Empty{}, nil
