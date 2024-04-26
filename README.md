@@ -5,6 +5,7 @@ The repository includes microservices for the NTHU Distributed System course lab
 Before going through the following parts, make sure your Docker is running since we are generating/testing/building code inside a Docker container to prevent dependencies from conflicting/missing on your host machine.
 ## Screenshot Verification
 ![image](https://github.com/johnson684/NTHU-Distributed-System/assets/86285385/328626f1-6963-42b4-a466-4c0fbc5fcb12)
+![image](https://github.com/johnson684/NTHU-Distributed-System/assets/86285385/dfd4fb6d-ebe2-4470-be5e-e257a94c98df)
 ![image](https://github.com/johnson684/NTHU-Distributed-System/assets/86285385/28a9ef8b-2238-46c1-b2bf-365a29d4be2a)
 ![image](https://github.com/johnson684/NTHU-Distributed-System/assets/86285385/e9e7fde8-0803-4854-b40c-eeab80313aeb)
 
