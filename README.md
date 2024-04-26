@@ -7,6 +7,9 @@ Before going through the following parts, make sure your Docker is running since
 ![image](https://github.com/johnson684/NTHU-Distributed-System/assets/86285385/16b5db82-7239-4694-aa3c-639239c12e4d)
 ![image](https://github.com/johnson684/NTHU-Distributed-System/assets/86285385/5e58644d-6bb5-4ad1-9e07-8694f948ad1a)
 ![image](https://github.com/johnson684/NTHU-Distributed-System/assets/86285385/60a56110-9f81-469e-bf45-a4c2fc9dc97f)
+![image](https://github.com/johnson684/NTHU-Distributed-System/assets/86285385/8bc60c74-e261-4735-a2b4-0ba93675d57c)
+![image](https://github.com/johnson684/NTHU-Distributed-System/assets/86285385/d707fba5-59c0-47f5-8e23-892d6fd0e851)
+![image](https://github.com/johnson684/NTHU-Distributed-System/assets/86285385/d016364a-0165-476d-91eb-f5980b2aabd9)
 
 
 ## Features
